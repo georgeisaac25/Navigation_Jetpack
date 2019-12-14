@@ -9,6 +9,7 @@
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_fragA"
+            app:popEnterAnim="@anim/slide_in_left"
             app:destination="@id/fragA" />
     </fragment>
     <fragment
@@ -18,9 +19,20 @@
         <action
             android:id="@+id/action_fragA_to_fragB"
             app:destination="@id/fragB" />
+
+
     </fragment>
     <fragment
         android:id="@+id/fragB"
         android:name="com.example.navigation_jetpack.FragB"
-        android:label="FragB" />
+        android:label="FragB" >
+
+        <argument
+            android:name="amount"
+            app:argType="com.example.navigation_jetpack.Money"/>
+
+        <argument
+            android:name="myString"
+            android:defaultValue="isa"/>
+    </fragment>
 </navigation>

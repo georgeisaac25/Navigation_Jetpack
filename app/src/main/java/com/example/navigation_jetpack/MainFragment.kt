@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
+//Reference : https://github.com/mitchtabian/Navigation-Components-Example/tree/master/app/src/main/res/anim
 
 class MainFragment : Fragment() {
 

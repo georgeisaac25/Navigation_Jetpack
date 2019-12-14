@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -25,7 +26,8 @@ class FragA : Fragment() {
 
 
         buttonNext.setOnClickListener {
-            navController.navigate(R.id.action_fragA_to_fragB)
+            val bundle = bundleOf("myString" to "Isaac", "amount" to Money(10))
+            navController.navigate(R.id.action_fragA_to_fragB,bundle)
         }
 
         buttonCancel.setOnClickListener {
